@@ -1,7 +1,7 @@
 
 import bananaChips from "../assets/banana-chips.jpeg";
 import keralaSnacks from "../assets/kerala-snacks.jpeg";
-import HealthyFoods from "../assets/healthy-foods.jpeg";
+import healthyFoods from "../assets/Healthy-foods.jpeg";
 import DryFruits from "../assets/dry-fruits.jpeg";
 import Sweets from "../assets/sweets.jpeg";
 import Spices from "../assets/spices.jpeg";
@@ -31,7 +31,7 @@ export const categories = [
   {
     id: 3,
     title: "Healthy Foods",
-    image: HealthyFoods,
+    image: healthyFoods,
     description: "Fresh and healthy choices",
     details: "Explore nutritious food choices for your everyday lifestyle.",
     products: ["Millet Foods", "Healthy Mixes", "Natural Snacks"],
