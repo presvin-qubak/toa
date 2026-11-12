@@ -1,0 +1,202 @@
+
+/* Contact Section */
+
+.contact {
+  width: 100%;
+  min-height: 600px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+
+  padding: 80px 10%;
+  background-color: #F8F8F0;
+}
+
+/* Contact Information */
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-tag {
+  color: #556B2F;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.contact-info h2 {
+  font-size: 42px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.contact-info h2 span {
+  color: #556B2F;
+}
+
+.contact-info > p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-details h3 {
+  color: #556B2F;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.contact-details p {
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Contact Form */
+
+.contact-form {
+  flex: 1;
+  background-color: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h3 {
+  color: #556B2F;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #556B2F;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Button */
+
+.contact-form button {
+  padding: 14px;
+  background-color: #556B2F;
+  color: #F0E68C;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3F5022;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .contact {
+    gap: 30px;
+    padding: 60px 5%;
+  }
+
+  .contact-info h2 {
+    font-size: 32px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .contact {
+    flex-direction: column;
+    padding: 45px 20px;
+    gap: 35px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-info h2 {
+    font-size: 30px;
+  }
+
+  .contact-form h3 {
+    font-size: 22px;
+  }
+}
+
+/* Toast Notification */
+
+.toast {
+  position: fixed;
+  top: 100px;
+  right: 25px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #fff;
+  color: #333;
+
+  padding: 15px 20px;
+  border-left: 5px solid #e74c3c;
+  border-radius: 8px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+  animation: toastSlide 0.4s ease;
+}
+
+.toast button {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+@keyframes toastSlide {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

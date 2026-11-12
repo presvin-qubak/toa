@@ -1,0 +1,393 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  min-height: 80px;
+  background-color: #556B2F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  position: relative;
+  z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  flex-shrink: 0;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.logo a {
+  color: #F0E68C;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+
+  background: rgba(240, 230, 140, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(240, 230, 140, 0.35);
+  border-radius: 15px;
+  padding: 15px 30px;
+}
+
+.nav-links li a {
+  color: #F0E68C;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffffff;
+}
+
+/* ACTIVE LINK */
+
+.nav-links li a.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav-links li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 2px;
+  background-color: #F0E68C;
+  border-radius: 5px;
+}
+
+/* =========================
+   MODERN NAV ACTIONS
+========================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* ICON BUTTONS */
+
+.icon-btn {
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(240, 230, 140, 0.35);
+  border-radius: 50%;
+  background: rgba(240, 230, 140, 0.12);
+  color: #F0E68C;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.icon-btn svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 1.8;
+}
+
+.icon-btn:hover {
+  background: #F0E68C;
+  color: #556B2F;
+  transform: translateY(-2px);
+}
+
+/* SEARCH */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: #F0E68C;
+  color: #556B2F;
+  font-size: 14px;
+  transition: all 0.35s ease;
+}
+
+.search-container.active .search-input {
+  width: 200px;
+  opacity: 1;
+  visibility: visible;
+  padding: 11px 15px;
+  margin-right: 9px;
+}
+
+.search-input::placeholder {
+  color: #556B2F;
+}
+
+/* CART BADGE */
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+
+  min-width: 19px;
+  height: 19px;
+  padding: 0 4px;
+
+  border-radius: 20px;
+  background: #F0E68C;
+  color: #556B2F;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #556B2F;
+}
+
+/* HAMBURGER */
+
+.menu-btn {
+  display: none;
+}
+
+.menu-active {
+  background: #F0E68C;
+  color: #556B2F;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 0 80px;
+  }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1199px) and (min-width: 769px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .nav-links {
+    gap: 18px;
+    padding: 13px 18px;
+  }
+
+  .nav-links li a {
+    font-size: 15px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .icon-btn {
+    width: 39px;
+    height: 39px;
+  }
+
+  .search-container.active .search-input {
+    width: 150px;
+  }
+}
+
+/* =========================
+   TABLET & MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 70px;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .icon-btn {
+    width: 39px;
+    height: 39px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  /* MOBILE DROPDOWN */
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+    background: #556B2F;
+    border: none;
+    border-radius: 0;
+    padding: 10px 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease,
+      visibility 0.35s ease;
+
+    pointer-events: none;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 13px 0;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+  }
+
+  /* MOBILE ACTIVE LINK */
+
+  .nav-links li a.active::after {
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+  }
+
+  .search-container.active .search-input {
+    width: 150px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    min-height: 65px;
+    padding: 0 12px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .nav-actions {
+    gap: 7px;
+  }
+
+  .icon-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .icon-btn svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .search-container.active .search-input {
+    width: 105px;
+    font-size: 12px;
+    padding: 9px;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+.icon-btn:focus-visible,
+.nav-links a:focus-visible,
+.logo a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links,
+  .search-input,
+  .icon-btn {
+    transition: none;
+  }
+}

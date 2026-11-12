@@ -1,0 +1,136 @@
+
+.success-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #f8f8f0;
+}
+
+.success-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 45px 30px;
+  text-align: center;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+  color: #556b2f;
+  margin-bottom: 20px;
+}
+
+.success-card h1 {
+  color: #556b2f;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.success-message {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.order-details {
+  background: #f8f8f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.order-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-details div:last-child {
+  border-bottom: none;
+}
+
+.order-details span {
+  color: #666;
+}
+
+.order-details strong {
+  color: #333;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.order-details .order-status {
+  color: #556b2f;
+}
+
+.delivery-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #556b2f;
+  margin-bottom: 30px;
+}
+
+.success-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.continue-shopping,
+.home-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.continue-shopping {
+  background: #556b2f;
+  color: white;
+}
+
+.continue-shopping:hover {
+  background: #405321;
+}
+
+.home-btn {
+  background: #f0e68c;
+  color: #333;
+}
+
+.home-btn:hover {
+  background: #e4d86c;
+}
+
+@media (max-width: 500px) {
+  .success-card {
+    padding: 30px 18px;
+  }
+
+  .success-card h1 {
+    font-size: 26px;
+  }
+
+  .success-buttons {
+    flex-direction: column;
+  }
+
+  .continue-shopping,
+  .home-btn {
+    width: 100%;
+  }
+}
