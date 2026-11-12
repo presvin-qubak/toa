@@ -1,9 +1,9 @@
 
 import bananaChips from "../assets/banana-chips.jpeg";
 import keralaSnacks from "../assets/kerala-snacks.jpeg";
-import HealthyFoods from "../assets/healthy-foods.jpeg";
-import DryFruits from "../assets/dry-fruits.jpeg";
-import Sweets from "../assets/sweets.jpeg";
+import HealthyFoods from "../assets/Healthy-foods.jpeg";
+import DryFruits from "../assets/Dry-Fruits.jpeg";
+import Sweets from "../assets/Sweets.jpeg";
 import Spices from "../assets/spices.jpeg";
 import TeaCoffee from "../assets/tea-coffee.jpeg";
 import pickles from "../assets/pickles.jpeg";
